@@ -11,7 +11,7 @@ print(multiline)
 print(type(single_quote))
 #strings as arrays
 #strings in python are unicode characters
-#square brackers are used to access the elements of the string
+#square brackets are used to access the elements of the string
 print(single_quote[1])
 #looping through a string
 for ch in single_quote:
@@ -41,7 +41,7 @@ print(b[5:])
 #negative indexing
 print(b[-11:-1])
 #modifying strings
-#strings are immutable we cannot change the characters of a string but we can modify it by usng strind methods
+#strings are immutable we cannot change the characters of a string but we can modify it by using string methods
 print(b.upper())
 print(b.lower())
 print(b.strip())
