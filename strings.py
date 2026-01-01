@@ -126,3 +126,8 @@ print(str1.strip())
 print(str1.swapcase())
 print(str1.translate(str1.maketrans('h','p')))
 print(str1.zfill(50))
+#python booleans
+i = 'hello'
+j = '12'
+print(bool(i))
+print(bool(j))
