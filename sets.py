@@ -28,7 +28,7 @@ set3 = set | set2
 print(set3)
 #frozen set
 #it is an immutable version of set
-#it has no add or remov methods
+#it has no add or remove methods
 fset = frozenset({'a','b','c','d'})
 print(fset)
 #methods
