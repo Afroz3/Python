@@ -17,4 +17,3 @@ y = dict.keys()
 print(y)
 y = dict.values()
 print(y)
-
