@@ -1,4 +1,4 @@
-#python supports the usual logical conditions from matheatics:
+#python supports the usual logical conditions from mathematics:
 #equals: a == b
 #not equals: a != b
 #less than: a<b
@@ -60,3 +60,9 @@ print('last num is',lastnum)'''
 l = [1,2,3,4,5,True]
 l.pop(True)
 print(l)
+#pass statement
+#if statement cannot be empty, but if you for some reason have if condition without content put the pass statement to avoid
+a = 33
+b = 44
+if b > a:
+    pass
