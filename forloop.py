@@ -27,4 +27,9 @@ for ch in range(2,7):
     print(ch)
 else:
     print('finished')'''
-
+for i in range(6):
+    if x == 3: break
+    print(i)
+else:
+    print('finally finished')
+#nested for loops
