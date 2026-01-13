@@ -43,3 +43,8 @@ color = ['red','green','brown']
 for x in food:
     for y in color:
         print(x,y)
+food = ['rice','curry','dessert']
+color = ['red','green','brown']
+for x in food:
+    for y in color:
+        print(x,y)
