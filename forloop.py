@@ -28,8 +28,18 @@ for ch in range(2,7):
 else:
     print('finished')'''
 for i in range(6):
-    if x == 3: break
+    if i == 3: break
     print(i)
 else:
     print('finally finished')
 #nested for loops
+food = ['rice','curry','dessert']
+color = ['red','green','brown']
+for x in food:
+    for y in color:
+        print(x,y)
+        food = ['rice','curry','dessert']
+color = ['red','green','brown']
+for x in food:
+    for y in color:
+        print(x,y)

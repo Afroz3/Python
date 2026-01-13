@@ -28,4 +28,8 @@ while i < 6:
     i += 1
 else:
     print('i is no longer less than 6')'''
-
+food = ['rice','curry','dessert']
+color = ['red','green','brown']
+for x in food:
+    for y in color:
+        print(x,y)
