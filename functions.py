@@ -56,8 +56,20 @@ my_function(animal = 'dog', name = 'buddy')'''
 #when you call an arguments without using keywords they are called positional arguments
 #they must be in correct order
 #mixing positional and keyword arguments
-def my_function(animal,name,age):
+'''def my_function(animal,name,age):
     print('I have an', animal, 'its name is', name, ' and its age is', age)
-my_function('dog','emil',4)
-
-
+my_function('dog','emil',4)'''
+#passing different data types
+#you can send any data type as an argument to a function
+#the data type will be preserved inside the function
+'''def my_function(fruits):
+    for fruit in fruits:
+        print(fruit)
+my_fruits = ['apple', 'banana', 'cherry']
+my_function(my_fruits)'''
+'''def my_function(person):
+    print('Name:', person['name'])
+    print('Age:', person['age'])
+my_person = {'name': 'Emil', 'age': 25}
+my_function(my_person)'''
+#return values
