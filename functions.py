@@ -21,4 +21,43 @@ print(greet())'''
 #pass statement
 #Arguments in functions
 #information can be passed to functions as arguments
-#arguments are specified after the function name 
+#arguments are specified after the function name inside the parentheses. you can add as many arguments as you want, just separate them with a comma
+'''def my_function(fname):
+    print(fname + ' refsnes')
+my_function('john')'''
+#parameters vs arguments
+#both pass information to the function
+'''def my_function(name):
+    print('hello', name)
+my_function('john')'''
+#number of arguments
+'''ef my_function(fname,lname):
+    print(fname + " " + lname)
+my_function('john','jin')
+'''
+#default parameter
+#you can assign default parameters if function is called without an argument it uses default values
+'''def my_function(name = 'friend'):
+    print('hello', name)
+my_function('john')'''
+'''def my_function(country = 'India'):
+    print('Iam from', country)
+my_function('Norway')
+my_function('Sweden')
+my_function()
+my_function('germany')'''
+#keyword arguments
+#you can send arguments with th key = value syntax
+'''def my_function(animal,name):
+    print('I have a', animal)
+    print('My', animal, 'name is', name)
+my_function(animal = 'dog', name = 'buddy')'''
+#positional arguments
+#when you call an arguments without using keywords they are called positional arguments
+#they must be in correct order
+#mixing positional and keyword arguments
+def my_function(animal,name,age):
+    print('I have an', animal, 'its name is', name, ' and its age is', age)
+my_function('dog','emil',4)
+
+
