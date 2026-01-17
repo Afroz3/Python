@@ -108,18 +108,76 @@ print(result)'''
 my_function('emil','tobias','john')'''
 #what are *args
 #the *args parameter allows a function to accept  any number of positional arguments
-def my_function(*args):
+'''def my_function(*args):
     print('Type:', type(args))
     print('first arguments: ',args[0])
     print('second arguments', args[1])
     print('all arguments',args)
-my_function('emil','sara','john')
+my_function('emil','sara','john')'''
 #use *args with  regular arguments
 #you can combine regular parameter with *args
 #regular parameters must come before *args
-def my_function(*numbers):
+'''def my_function(*numbers):
     total = 0
     for num in numbers:
         total += num
     return total
-print(my_function(1,2,3))
+print(my_function(1,2,3))'''
+'''def my_function(*numbers):
+    if len(numbers) == 0:
+        return None
+    max_num = numbers[0]
+    for num in numbers:
+        if num > max_num:
+            max_num = num
+    return max_num
+print(my_function(1,2,3,4,5,6))'''
+#scope
+#a variable is only available from inside the region it is created
+#local scope
+#a variable created inside a function belongs to the local scope, and can only used inside the function
+'''def myfunc():
+    x = 300
+    print(x)
+myfunc()'''
+#function inside function
+'''def myfunc():
+    x = 300
+    def innerfunc():
+        print(x)
+    innerfunc()
+myfunc()'''
+#global scope
+'''x = 300
+def function():
+    print(x)
+function()
+print(x)'''
+#naming variables
+#if you create two variables with same name it will take as two seperate variables one as global scope and the other as local scope
+'''x = 300
+def function():
+    x = 200
+    print(x)
+function()
+print(x)'''
+#global keyword
+#you need to create a global scope but stuck inside a local scope you can use the global keyword
+'''def myfunction():
+    global x
+    x = 300
+    print(x)
+myfunction()
+print(x)'''
+#nonlocal keyword
+#non local variables are used to work inside nested functions
+#the non local variable makes the variable belong to the outer function
+def my1():
+    x = 'jane'
+    def my2():
+        nonlocal x
+        x = 'hello'
+    my2()
+    return x
+print(my1())
+#legb rule
