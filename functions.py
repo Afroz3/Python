@@ -73,3 +73,53 @@ my_function(my_fruits)'''
 my_person = {'name': 'Emil', 'age': 25}
 my_function(my_person)'''
 #return values
+'''def my_function(x,y):
+    return x+y
+result=my_function(5,5)
+print(result)'''
+#returning different data types
+'''def my_function():
+    return ['apple', 'banana', 'cherry']
+fruits = my_function()
+print(fruits[0])
+print(fruits[1])
+print(fruits[2])'''
+'''def my_function():
+    return (10, 20)
+x, y = my_function()
+print('x:', x)
+print('y:', y)'''
+#positional only arguments
+'''def my_function(name,/):
+    print('hello',name)
+my_function('john')'''
+#keyword only arguments
+#to specify that a function can have only keyword arguments, add*, before the arguments
+#combining positional only and keyword only
+'''def my_function(a,b,/,*,c,d):
+    return a+b+c+d'''
+'''result = my_function(10,5,c=15,d=20)
+print(result)'''
+#python *args and **kwargs
+#by default a function must be called with the correct number of arguments
+#however sometimes you may not know how many arguments that will be passed into your function
+'''def my_function(*kids):
+    print('the youngest kid is ' + kids[2])
+my_function('emil','tobias','john')'''
+#what are *args
+#the *args parameter allows a function to accept  any number of positional arguments
+def my_function(*args):
+    print('Type:', type(args))
+    print('first arguments: ',args[0])
+    print('second arguments', args[1])
+    print('all arguments',args)
+my_function('emil','sara','john')
+#use *args with  regular arguments
+#you can combine regular parameter with *args
+#regular parameters must come before *args
+def my_function(*numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+print(my_function(1,2,3))
