@@ -180,4 +180,15 @@ def my1():
     my2()
     return x
 print(my1())
-#legb rule
+#decorators
+#decorators lets you add extra behaviour to a function, without changing the function's code
+#a decorator is a function that takes another function as input and returns a new function
+#basic decorator
+#a basic decorator that uppercases the return value of the decorated function
+'''def change(func):
+    def myinner():
+        return func().upper()
+    return myinner
+def myfunction():
+    return 'hello sally'
+print(myfunction())'''
