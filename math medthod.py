@@ -10,3 +10,5 @@ print(x)
 '''
 #importing math method
 import math
+x = math.sqrt(9)
+print(x)
