@@ -84,3 +84,38 @@ car1.description()'''
 p1 = person("john")
 p1.welcome()'''
 #python class properties
+'''class person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+p1 = person('john',36)
+print(p1.name)
+print(p1.age)
+p1.age = 40
+print(p1.age)'''
+#inheritance
+#allows you to define a class that inherits all the methods and properties from another class
+#parent class is the class being inherited from also called base class
+#Child class is the class that inherits from another class also called derived class
+'''class person:
+    def __init__(self,fname,lname):
+        self.fname = fname
+        self.lname = lname
+    def printname(self):
+        print(self.fname , self.lname)
+p1 = person('john','doe')
+p1.printname()
+#create a child class
+class Student(person):
+    pass
+x = Student('mike','smith')
+x.printname()
+#add the __init__() function to the child class
+class Student(person):
+    def __init__(self,fname,lname):
+#super() function allows you to call the __init__() method of the parent class
+        super().__init__(fname,lname)
+        x = Student('mike','smith')
+        x.printname()
+'''
+#polymorphism
