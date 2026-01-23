@@ -119,3 +119,172 @@ class Student(person):
         x.printname()
 '''
 #polymorphism
+#polymorphism means having many forms
+#it refers to methods/functions/operators with the same name that can be executed on many objects or classes
+#class polymorphism
+'''class car:
+    def __init__(self,brand,name):
+        self.brand = brand
+        self.name = name
+    def move(self):
+        print('Drive')
+class ship:
+    def __init__(self,brand,name):
+        self.brand = brand
+        self.name = name
+    def move(self):
+        print('Sail')
+class plane:
+    def __init__(self,brand,name):
+        self.brand = brand
+        self.name = name
+    def move(self):
+        print('Fly')
+car1 = car('ford','mustand')
+ship1 = ship('credilia','titanic')
+plane1 = plane('airbus','a120')
+for x in (car1,ship1,plane1):
+    x.move()
+print(car1.brand,car1.name)'''
+#encapsulation
+#encapsulation is about protecting data inside a class
+#it means keeping data and methods together in a class while controlling how the data can be accessed from outside the class
+#this prevents accidental modification of data and hides the internal details of how the class works
+#private properties
+'''class person:
+    def __init__(self,name,age):
+        self.name = name
+        self.__age = age
+    def get_age(self):
+        return self.__age
+p1 = person('john',36)
+print(p1.name)
+print(p1.get_age())'''
+#set private property value
+#to modify a private property you can create a setter method
+# setter method can also validate before setting the value
+'''class person:
+    def __init__(self,name,age):
+        self.name= name
+        self.__age = age
+    def get_age(self):
+        return self.__age
+    def set_age(self,age):
+        if age > 0:
+            self.__age = age
+        else:
+            print('age must be positive')
+p1 = person('john',36)
+print(p1.get_age())'''
+#why to use encapsulation
+#data protection : prevents accidental modification of data
+#validation : allows validation before setting values
+#flexibility : internal implementation can be changed without affecting external code
+#control : you have full control how data is accessed and modified
+'''class student:
+    def __init__(self,name):
+        self.name = name
+        self.__grade = 0
+    def set_grade(self,grade):
+        if grade >= 0 and grade <= 100:
+            self.__grade = grade
+        else:
+            print('enter valid grade')
+    def get_grade(self):
+        return self.__grade
+    def get_status(self):
+        if self.__grade >=40:
+            return 'pass'
+        else:
+            return 'fail'
+s1 = student('john')
+s1.set_grade(31)
+print(s1.get_grade())
+print(s1.get_status())'''
+#protected properties
+'''class person:
+    def __init__(self,name,salary):
+        self.name = name
+        self._salary = salary
+p1 = person('john',1000)
+print(p1.name)
+print(p1._salary)'''#can access but shouldn't be accessed directly
+#inner class
+#an inner class is defined inside another class
+#the inner class can access the properties and methods of the outer class
+#inner classes are useful for grouping classes that are used only in one place making your code more organized
+#example of inner class
+'''class outer:
+    def __init__(self):
+        self.name = 'outer class'
+    class inner:
+        def __init__(self):
+            self.name = 'inner class'
+        def display(self):
+            print('this is inner class')
+Outer = outer()
+Inner = outer.inner()
+print(Outer.name)
+print(Inner.name)'''
+#accessing inner class from the outside
+'''class outer:
+    def __init__(self):
+        self.name = 'outer class'
+    class inner:
+        def __init__(self):
+            self.name = 'inner class'
+        def display(self):
+            print('this is inner class')
+Outer = outer()
+Inner = outer.inner()
+Inner.display()'''
+#accessing outer class from inner class
+'''class Outer:
+    def __init__(self):
+        self.name = 'john'
+    class Inner:
+        def __init__(self,outer):
+            self.outer = outer
+        def display(self):
+            print(f'outer class name is {self.outer.name}')
+outer = Outer()
+inner = outer.Inner(outer)
+inner.display()'''
+'''class Car:
+    def __init__(self,brand,model):
+        self.brand =brand
+        self.model = model
+        self.engine = self.Engine()
+
+        class Engine:
+            def __init__(self):
+                self.status = 'off'
+            def start(self):
+                self.status = 'Running'
+                print('engine started')
+            def stop(self):
+                self.status = 'off'
+                print('engine stopped')
+            def drive(self):
+                if self.status == 'Running':
+                    print(f'driving the {self.brand} {self.model}')
+                else:
+                    print('start the engine first')
+car1 = Car('tata','safari')
+car1.drive()
+car1.engine.start()
+car1.drive()'''
+#many inner classes
+'''class Computer:
+    def __init__(self):
+        self.cpu = self.CPU()
+        self.ram = self.RAM()
+    class CPU:
+        def process(self):
+            print('processing data')
+    class RAM:
+        def store(self):
+            print('storing data')
+computer = Computer()
+computer.cpu.process()
+computer.ram.store()'''
