@@ -77,7 +77,9 @@ for i in arr:
     if i == key:
         print(arr.index(i),end = " ")
 print()'''
-def search(arr,n):
+
+#LINEAR SEARCH
+'''def search(arr,n):
     for i in range(len(arr)):
         if arr[i] == n:
             return i
@@ -89,4 +91,33 @@ if __name__ == "__main__":
     if(result == -1):
         print('element not found')
     else:
-        print('element found at index :',result)
+        print('element found at index :',result)'''
+#fninding an index of an element in an unsorted array using linear search
+'''def search(arr,n):
+    for i in range(len(arr)):
+        if arr[i] == n:
+            return i
+    return -1
+if __name__ == "__main__":
+    arr = [12,34,56,78,90,47,91]
+    n = 47
+    result = search(arr,n)
+    if result == -1:
+        print('NF')
+    else:
+        print('element found at index', result)'''
+#finding the occurance of an element in an array using linear search
+def counting(arr,n):
+    count = 0
+    for i in range(len(arr)):
+        if arr[i] == n:
+            count += 1
+    return count
+if __name__ == "__main__":
+    arr = [1,21,42,21,63,21,69]
+    n = 21
+    result = counting(arr,n)
+    if result == 0:
+        print('element not found')
+    else:
+        print('element fount', result , 'times')
