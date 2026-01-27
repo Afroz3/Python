@@ -107,7 +107,7 @@ if __name__ == "__main__":
     else:
         print('element found at index', result)'''
 #finding the occurance of an element in an array using linear search
-def counting(arr,n):
+'''def counting(arr,n):
     count = 0
     for i in range(len(arr)):
         if arr[i] == n:
@@ -120,4 +120,53 @@ if __name__ == "__main__":
     if result == 0:
         print('element not found')
     else:
-        print('element fount', result , 'times')
+        print('element fount', result , 'times')'''
+#finding the minimum and maximum element in an array using linear search
+'''def min_max(arr,min,max):
+    for i in range(len(arr)):
+        return min(arr)
+        return max(arr)
+if __name__ == "__main__":
+    arr = [12,21,67,87,10,8,91,17]
+    result = min_max(arr,min,max)
+    print('min element is :', min(arr))
+    print('max element is :', max(arr))'''
+'''def min_max(arr):
+    minimum = arr[0]
+    maximum = arr[0]
+    for i in arr:
+        if i < minimum:
+            minimum = i
+        if i > maximum:
+            maximum = i
+    return minimum, maximum
+if __name__ == "__main__":
+    arr = [1,2,3,4,5,6,7,8,9]
+    minimum, maximum  = min_max(arr)
+    print('minimum element is:', minimum)
+    print('maximum element is:', maximum)'''
+#to check if an array is sorted using linear search
+'''def sort(arr):
+    for i in range(len(arr)-1):
+        if arr[i] > arr[i+1]:
+            return False
+    return True
+if __name__ == "__main__":
+    arr = [1,2,3,4,5,6,7,8,9]
+    result = sort(arr)
+    if result == False:
+        print('unsorted')
+    else:
+        print('sorted')'''
+#to reverse an array using linear search
+def reverse(arr):
+    start = 0
+    end = len(arr) - 1
+    while start < end:
+        arr[start],arr[end] = arr[end],arr[start]
+        start += 1
+        end -= 1
+if __name__ == "__main__":
+    arr = [1,2,3,4,5]
+    reverse(arr)
+    print(arr)
